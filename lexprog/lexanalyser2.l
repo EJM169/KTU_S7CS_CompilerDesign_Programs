@@ -19,7 +19,7 @@ ws {}
 %%
 int main()
 {
-	yyin=fopen("in.txt","r");
+	yyin=fopen("inp.txt","r");
 	yylex();
 	yywrap();
 	fclose(yyin);
