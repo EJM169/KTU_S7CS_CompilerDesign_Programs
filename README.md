@@ -8,5 +8,8 @@ If you want to run the programs make sure you have all the languages and necessa
    Modify it as you wish
 2. It contains the lex program which requires lex tool to run it. After running the lex program using lex tool you need to run the C program that is generated as the intermediate which can be run by typing gcc lex.yy.c
 3. It contains the yacc program which requires yacc tool to run it. After running the lex program using yacc tool you need to run the C program that is generated as the intermediate which can be run by typing gcc y.tab.c
+4. It's a for loop syntax checker using yacc and lex. First run the lex program and then run the yacc program. Don't forget to include the lex program file in the yacc program auxillary section as it takes the input from the lex program. If you're modifying it don't forget that.
+5. It's a if else syntax checker using yacc and lex. First run the lex program and then run the yacc program. Don't forget to include the lex program file in the yacc program auxillary section as it takes the input from the lex program. If you're modifying it don't forget that.
+
 
 
