@@ -1,0 +1,6 @@
+int
+float
+double
+void
+char
+switch
