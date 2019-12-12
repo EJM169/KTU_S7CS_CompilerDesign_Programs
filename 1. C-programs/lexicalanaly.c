@@ -9,15 +9,15 @@ void main()
 	f1=fopen("input.txt","r");
 	
 	while(fscanf(f1,"%s",&str)!=EOF)
-	{  / ..
+	{  
 
-		flag=0;/
-		f2=fopen("keyword.txt","r"//);
+		flag=0;
+		f2=fopen("keyword.txt","r");
 		while(fscanf(f2,"%s",&str1)!=EOF)
 		{		
 			if(strcmp(str,str1)==0)
 			{
-				printf("%s is a keyword\n",&str);		
+				printf("%s is a keyword\n",&str);	//This is used for finding keywords in input file	
 				flag=1;
 				break;
 			}	
@@ -32,16 +32,16 @@ void main()
 			{
 				case 'a'...'z':
 				case 'A'...'Z':  	while((str1[i+1]>='A')&&(str1[i+1]<='Z')||(str1[i+1]>='a')&&(str1[i+1]<='z')||(str1[i+1]>='0')&&(str1[i+1]<='9'))
-{i++;}
-				printf("%d is an identifier",&ch);
+{i++;}	//Identifier checking
+				printf("%d is an identifier",&ch);	
 				break;
 				case '1'...'9': if(isdigit(ch)){	
-						printf("%s is a digit\n",&ch);
+						printf("%s is a digit\n",&ch);	//Digit checking
 					}
 				break;				
 				case '+':
 				case '-':
-				case '*':
+				case '*':		//Operator checking
 				case '/':
 				case '=':
 				case '>'
@@ -50,7 +50,7 @@ void main()
 				
 				case '{':
 				case '}':
-				case '(':
+				case '(':		// Symbol Checking
 				case ')':
 				case ',':
 				case ';':	printf("%s is a symbol \n",&ch);
@@ -61,7 +61,7 @@ void main()
 		}
 	fclose(f2);
 	}
-	fclose(f1);
+	fclose(f1);		//Closing the files
 	
 }
 
