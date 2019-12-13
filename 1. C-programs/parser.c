@@ -12,7 +12,7 @@ int id(char a);
 main(){
 	printf("Enter an arthimetic expression : ");
 		scanf("%[^\n]",input);
-	if(E())			//Call the E function to check for E's components
+	if(E())			//Call the E function to check for E's components and to start
 		printf("\n Expression is accepted \n");
 	else
 		printf("\n Expression is not accepted\n");
@@ -34,8 +34,8 @@ void Eprime()
 		j=i;
 		printf("\n E'->%cTE'",input[j]);
 		i++;
-		T();
-		Eprime();
+		T();		//Call the T function to check for it's components
+		Eprime();	//Checking for Eprime or E' components
 	}
 	else
 	{
@@ -45,8 +45,8 @@ void Eprime()
 void T()
 {
 	printf("\n T'->FT'");
-	F();
-	Tprime();
+	F();			//Checking for F components
+	Tprime();		//Checking for Tprime or T' components
 }	
 void Tprime()
 {
@@ -56,7 +56,7 @@ void Tprime()
 		printf("\n T'->%cFT'",input[j]);
 		i++;
 		F();		//Checking for F components
-		Tprime();
+		Tprime();	//Checking for Tprime or T' components
 	}
 	else
 	{
